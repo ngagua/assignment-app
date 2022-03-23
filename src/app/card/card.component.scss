@@ -1,0 +1,10 @@
+.card {
+  //   width: 150px;
+  height: 150px;
+  background-color: green;
+  padding: 10px;
+  &__status {
+    border: 1px solid grey;
+    width: fit-content;
+  }
+}
