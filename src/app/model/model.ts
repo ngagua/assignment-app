@@ -3,5 +3,11 @@ export interface User {
   lastName: string;
   about: string;
   birthDate: string;
-  status: string;
+  status: Status;
+}
+
+export enum Status {
+  Active = 'Active',
+  Deleted = 'Deleted',
+  Inactive = 'Inactive',
 }
