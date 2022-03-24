@@ -6,7 +6,7 @@
     <p *ngIf="loading">list is empty</p>
     <ng-container *ngIf="!loading">
       <ng-container *ngFor="let user of users">
-        <app-card [user]="user" appHighlight></app-card>
+        <app-card [user]="user"  ></app-card>
       </ng-container>
     </ng-container>
   </div>

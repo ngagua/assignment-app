@@ -11,3 +11,9 @@ export enum Status {
   Deleted = 'Deleted',
   Inactive = 'Inactive',
 }
+
+export enum Colors {
+  Red = 'red',
+  Blue = 'blue',
+  Green = 'green',
+}
