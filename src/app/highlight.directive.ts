@@ -7,6 +7,7 @@ import { User, Status } from './model/model';
 export class HighlightDirective {
   @Input('appHighlight') cardBackgroundColor: string | undefined;
   @Input() user: User | undefined;
+
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {

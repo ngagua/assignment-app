@@ -3,6 +3,6 @@
     <h3 class="card__title">{{ user?.firstName }} {{ user?.lastName }}</h3>
     <p class="card__about">{{ user?.about }}</p>
     <p class="card__birthdate">{{ user?.birthDate }}</p>
-    <button class="card__status" ngClass="user.status == 'Active'? color = green : color = red">{{ user?.status }}</button>
+    <button class="card__status" [ngClass]="getStyle(user?.status)">{{ user?.status }}</button>
   </div>
 

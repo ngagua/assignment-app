@@ -11,16 +11,27 @@ export class CardComponent implements OnInit {
 
   cardBackgroundColor: string | undefined = '';
 
-  // if(user?.status == Status.Active){
-  //   this.cardBackgroundColor = Colors.Green
-  // } else if (user.status == Status.Deleted) {
-  //   this.cardBackgroundColor = Colors.Red
-
-  // } else {
-  //   this.cardBackgroundColor = Colors.Blue
-  // }
-
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.setColor();
+  }
+
+  setColor() {
+    if (this.user?.status == Status.Active) {
+      this.cardBackgroundColor = Colors.Green;
+    } else if (this.user?.status == Status.Deleted) {
+      this.cardBackgroundColor = Colors.Red;
+    } else {
+      this.cardBackgroundColor = Colors.Blue;
+    }
+  }
+
+  getStyle(status: Status | undefined) {
+    return {
+      red: status == Status.Deleted,
+      blue: status == Status.Inactive,
+      green: status == Status.Active,
+    };
+  }
 }
