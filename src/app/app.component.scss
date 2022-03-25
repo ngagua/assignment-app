@@ -1,7 +1,7 @@
 .container {
   display: grid;
-  grid-template-columns: 200px 200px;
-  gap: 10px;
+  grid-template-columns: 180px 180px;
+  gap: 20px;
   justify-content: center;
   //   margin: 10px;
   &__title {
@@ -21,4 +21,18 @@
     background-color: red;
     margin: 5px;
   }
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  margin: 20px 0;
+}
+
+.task {
+  margin: 50px 0 0 50px;
 }
