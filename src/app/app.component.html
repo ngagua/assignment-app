@@ -3,11 +3,24 @@
 <section>
   <button (click)="loadUsers()">Load users</button>
   <div class="container">
-    <p *ngIf="loading">list is empty</p>
-    <ng-container *ngIf="!loading">
+    <p *ngIf="loading" class="container__title">list is empty</p>
+    <ng-container *ngIf="users.length">
+      <div class="container__title">Users: {{ users | usersname }}</div>
       <ng-container *ngFor="let user of users">
-        <app-card [user]="user"  ></app-card>
+        <app-card [user]="user"></app-card>
       </ng-container>
     </ng-container>
   </div>
 </section>
+
+<h2>Task 2</h2>
+
+<div class="block-container">
+  <div class="block-container__row" *ngFor="let block of blockArray | addBlock">
+    <div
+      class="block-container__column"
+      *ngFor="let block of blockArray"
+      appColorOnHover
+    ></div>
+  </div>
+</div>

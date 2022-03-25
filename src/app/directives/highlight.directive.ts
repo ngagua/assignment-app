@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
-import { User, Status } from './model/model';
+import { User, Status } from '../model/model';
 
 @Directive({
   selector: '[appHighlight]',

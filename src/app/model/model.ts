@@ -2,7 +2,7 @@ export interface User {
   firstName: string;
   lastName: string;
   about: string;
-  birthDate: string;
+  birthDate: Date;
   status: Status;
 }
 

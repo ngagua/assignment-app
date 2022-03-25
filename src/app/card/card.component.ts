@@ -1,10 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { User, Status, Colors } from '../model/model';
+import { CountagePipe } from '../pipes/countage.pipe';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
+  providers: [CountagePipe],
 })
 export class CardComponent implements OnInit {
   @Input() user: User | undefined;
